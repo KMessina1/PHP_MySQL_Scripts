@@ -159,8 +159,8 @@ function processShippingLabel(){
             $to_email;
 
     $shippoKey = ($testOrder)
-        ?"shippo_test_dbba9bf66994e34039790c61d2200867edf9ddb5"
-        :"shippo_live_58400d9a4089b3888308599efe8e326da313150f";
+        ?"shippo_test_"
+        :"shippo_live_";
 
     \Shippo::setApiKey($shippoKey); // SHIPPO: API Key
     \Shippo::setApiVersion("2018-02-08");
@@ -313,8 +313,8 @@ function processPayment() {
     global $order,$customer,$error_Stripe,$testOrder;
 
     $stripeKey = ($testOrder)
-        ?"sk_test_VPg4Flxsq6nvrsBLXldUqPoH"
-        :"sk_live_XjBdnYl8erbWUpj6MPxwYdJg";
+        ?"sk_test_"
+        :"sk_live_";
 
     \Stripe\Stripe::setApiKey($stripeKey); // STRIPE: Secret Key
 
@@ -522,7 +522,7 @@ function processSalesTax() {
                 'sales_tax' => $taxAmt
             ];
 
-            $taxJarKey = 'a60873023c5f4fcf98dd2fd9641656c9';
+            $taxJarKey = '';
 
             try {
                 $TaxJarClient = TaxJar\Client::withApiKey($taxJarKey);
