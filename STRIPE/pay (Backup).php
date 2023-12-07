@@ -26,16 +26,16 @@ require_once 'generated-conf/config.php'; // This is where Propel loads the data
 header('Content-Type: application/json');
 
 /* STRIPE: Secret Key */
-//\Stripe\Stripe::setApiKey("sk_test_A5eTBWoS24ANyxETlElmEUyl");
-\Stripe\Stripe::setApiKey("sk_live_XjBdnYl8erbWUpj6MPxwYdJg");
-// \Stripe\Stripe::setApiKey("sk_test_VPg4Flxsq6nvrsBLXldUqPoH");
+//\Stripe\Stripe::setApiKey("sk_test_");
+\Stripe\Stripe::setApiKey("sk_live_");
+// \Stripe\Stripe::setApiKey("sk_test_");
 
 /* SHIPPO: API Key */
-\Shippo::setApiKey("shippo_live_58400d9a4089b3888308599efe8e326da313150f");
-// \Shippo::setApiKey("shippo_test_dbba9bf66994e34039790c61d2200867edf9ddb5");
+\Shippo::setApiKey("shippo_live_");
+// \Shippo::setApiKey("shippo_test_");
 
 /* TAXJAR: API Key */
-$tax_client = TaxJar\Client::withApiKey('a60873023c5f4fcf98dd2fd9641656c9');
+$tax_client = TaxJar\Client::withApiKey('');
 
 $orderID = "n/a";
 
