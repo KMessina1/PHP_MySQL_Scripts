@@ -1,10 +1,10 @@
 <?php
 require_once('vendor/autoload.php');
-require_once 'generated-conf/config.php'; // This is where Propel loads the database. Look in propel.yaml for the connection info
-\Stripe\Stripe::setApiKey("sk_test_VPg4Flxsq6nvrsBLXldUqPoH");
-//\Stripe\Stripe::setApiKey("pk_live_v1JGFjnFgt6Y5Oc0ixlwDSWq");
-\Shippo::setApiKey("shippo_test_dbba9bf66994e34039790c61d2200867edf9ddb5");
-$tax_client = TaxJar\Client::withApiKey('a60873023c5f4fcf98dd2fd9641656c9');
+require_once 'generated-conf/config fkey.php'; // This is where Propel loads the database. Look in propel.yaml for the connection info
+\Stripe\Stripe::setApiKey("sk_test_");
+//\Stripe\Stripe::setApiKey("pk_live_");
+\Shippo::setApiKey("shippo_test_");
+$tax_client = TaxJar\Client::withApiKey('');
 header('Content-Type: application/json');
 if($_POST["order_id"] == null){
     http_response_code(400);
