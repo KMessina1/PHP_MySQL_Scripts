@@ -16,8 +16,8 @@ require_once('vendor/autoload.php');
 require_once 'generated-conf/config.php'; // This is where Propel loads the database. Look in propel.yaml for the connection info
 
 /* STRIPE: Secret Key */
-//\Stripe\Stripe::setApiKey("sk_test_A5eTBWoS24ANyxETlElmEUyl");
-\Stripe\Stripe::setApiKey("sk_live_XjBdnYl8erbWUpj6MPxwYdJg");
+//\Stripe\Stripe::setApiKey("sk_test_");
+\Stripe\Stripe::setApiKey("sk_live_");
 
 $q = new CustomersQuery();
 $customer = $q->findPK($_POST["customer_id"]);
