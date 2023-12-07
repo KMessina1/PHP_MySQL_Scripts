@@ -23,8 +23,8 @@ require_once('vendor/autoload.php');
 require_once 'generated-conf/config.php';
 
 /* STRIPE: Secret Key */
-//\Stripe\Stripe::setApiKey("sk_test_A5eTBWoS24ANyxETlElmEUyl"); // Test Key
-\Stripe\Stripe::setApiKey("sk_live_XjBdnYl8erbWUpj6MPxwYdJg");  // Live Key
+//\Stripe\Stripe::setApiKey("sk_test_"); // Test Key
+\Stripe\Stripe::setApiKey("sk_live_");  // Live Key
 
 $q = new CustomersQuery();
 $customer = $q->findPK($_POST["customer_id"]);
