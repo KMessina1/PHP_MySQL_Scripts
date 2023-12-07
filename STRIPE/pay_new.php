@@ -47,9 +47,9 @@ header('Content-Type: application/json');
 $testOrder = (bool)$_POST["testOrder"];
 if ($testOrder == null) { $testOrder = false; }
 array_push($stack,($testOrder ?"testOrder = True" :"testOrder = False"));
-$stripeKey = ($testOrder == false) ?'sk_live_XjBdnYl8erbWUpj6MPxwYdJg' :'sk_test_VPg4Flxsq6nvrsBLXldUqPoH';
-$shippoKey = ($testOrder == false) ?'shippo_live_58400d9a4089b3888308599efe8e326da313150f' :'shippo_test_dbba9bf66994e34039790c61d2200867edf9ddb5';
-$taxJarKey = 'a60873023c5f4fcf98dd2fd9641656c9';
+$stripeKey = ($testOrder == false) ?'sk_live_' :'sk_test_';
+$shippoKey = ($testOrder == false) ?'shippo_live_' :'shippo_test_';
+$taxJarKey = '';
 
 \Stripe\Stripe::setApiKey($stripeKey); // STRIPE: Secret Key
 \Shippo::setApiKey($shippoKey); // SHIPPO: API Key
