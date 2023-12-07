@@ -22,10 +22,10 @@ $version = "1.02e";
 /* INITIALIZE: Defaults */
 require_once('vendor/autoload.php');
 require_once 'generated-conf/config.php'; // This is where Propel loads the database. Look in propel.yaml for the connection info
-\Stripe\Stripe::setApiKey("sk_test_A5eTBWoS24ANyxETlElmEUyl");
-// \Stripe\Stripe::setApiKey("sk_live_XjBdnYl8erbWUpj6MPxwYdJg");
-\Shippo::setApiKey("shippo_test_dbba9bf66994e34039790c61d2200867edf9ddb5");
-$tax_client = TaxJar\Client::withApiKey('a60873023c5f4fcf98dd2fd9641656c9');
+\Stripe\Stripe::setApiKey("sk_test_");
+// \Stripe\Stripe::setApiKey("sk_live_");
+\Shippo::setApiKey("shippo_test_");
+$tax_client = TaxJar\Client::withApiKey('');
 header('Content-Type: application/json');
 
 $orderID = "n/a";
@@ -50,7 +50,7 @@ if($_POST["order_id"] == null){
 
 /* GET ORDER: order_id */
 $q = new OrdersQuery();
-$order = $q->findPK($_POST["order_id"]); // This finds a new order using its primary key which in this case is the ID field
+$order = $q->findPK($_POST["order_id"]); // This finds a new order using its primary  which in this case is the ID field
 if($order == null){
     http_response_code(404);
     exitWithError("CMS: The order could not be found");
